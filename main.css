@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "Aller";
+  src: url(Aller_Std_Bd.ttf), format(truetype);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Aller";
+  font-size: clamp(40px, 6.429vw, 170px);
+}
+
+.mob {
+  display: none !important;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+}
+
+.wrapper span {
+  display: inline-block;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.divider {
+  margin: -1px 0;
+  height: 2px;
+  width: 100%;
+  background: #000;
+}
+
+.text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text span {
+  background: #000;
+  padding: 0 20px;
+}
+
+.space {
+  flex-grow: 1;
+  background: transparent !important;
+  border-top: 20px solid #000;
+  border-bottom: 20px solid #000;
+  margin: -1px;
+}
+
+.fill {
+  background: #000;
+  flex-grow: 1;
+}
+
+@media (max-width: 800px) {
+  body {
+    font-size: 12.088vw;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mob {
+    display: inherit !important;
+  }
+
+  .text span {
+    padding: 0 10px;
+  }
+  .text--line span {
+    width: 100%;
+  }
+
+  .space {
+    border-top: 10px solid #000;
+    border-bottom: 10px solid #000;
+  }
+}
