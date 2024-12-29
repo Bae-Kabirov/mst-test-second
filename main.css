@@ -26,7 +26,7 @@ body {
   color: #fff;
   display: flex;
   flex-direction: column;
-  min-width: 100px;
+  min-width: 320px;
 }
 
 .wrapper span {
@@ -43,8 +43,15 @@ body {
   z-index: -1;
 }
 
+.bl {
+  border-left: 20px solid #000;
+}
+.br {
+  border-right: 20px solid #000;
+}
+
 .divider {
-  margin: -1px 0;
+  margin: -2px 0;
   height: 2px;
   width: 100%;
   background: #000;
@@ -53,6 +60,7 @@ body {
 .text {
   display: flex;
   justify-content: space-between;
+  outline: 2px solid #000;
 }
 
 .text span {
@@ -63,9 +71,10 @@ body {
 .space {
   flex-grow: 1;
   background: transparent !important;
-  border-top: 20px solid #000;
-  border-bottom: 20px solid #000;
+  border-top: 1.042vw solid #000;
+  border-bottom: 1.042vw solid #000;
   margin: -1px;
+  line-height: 100%;
 }
 
 .fill {
@@ -74,6 +83,13 @@ body {
 }
 
 @media (max-width: 800px) {
+  .bl {
+    border-left: 10px solid #000;
+  }
+  .br {
+    border-right: 10px solid #000;
+  }
+
   body {
     font-size: 12.088vw;
   }
@@ -96,5 +112,11 @@ body {
   .space {
     border-top: 10px solid #000;
     border-bottom: 10px solid #000;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 11vw;
   }
 }
